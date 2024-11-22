@@ -1,6 +1,42 @@
-﻿@using BlazorWASM.Layout.B2C
+﻿@using BlazorWASM.Components
+@using BlazorWASM.Layout.B2C
 @using BlazorWASM.Components.Panel
 @layout SiteLayout
 @page "/"
 
-<HeaderMenu />
+<!-- Header -->
+
+<CustomerHeader />
+
+<!-- Carsual Section -->
+<section class="py-2">
+    <div class="container-fluid bg-light-subtle">
+        <div class="row-cols-2 row align-items-center justify-content-center">
+            <div class="col-lg-8 text-dark  text-justify">
+                <div class="row p-2">
+                    <div class="col-lg-6">
+                        <h3>hi image <i class="text-warning">developer</i> :)</h3>
+                        <div class="alert alert-dark d-flex align-items-center" role="alert">
+                            <i class="bi bi-linkedin fs-5 p-2"></i>
+                            <a href="#"
+                                class="alert-link text-decoration-none">https://www.linkedin.com/in/ramin-azali-2b506116a</a>
+                        </div>
+                        <br>
+                        <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa
+                            nesciunt
+                            enim, earum praesentium laudantium aperiam quisquam expedita dolores dicta explicabo, ex rem
+                            voluptatum corrupti libero esse? Nemo, laborum dignissimos. </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="photo_2024-09-07_18-21-06.jpg" alt="Azali"
+                            class="img-fluid rounded d-none d-sm-block">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+
+            </div>
+
+        </div>
+    </div>
+</section>

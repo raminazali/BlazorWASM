@@ -7,6 +7,10 @@
 body {
     font-size: .875rem;
 }
+*{
+    font-family:  'Abel-regular', sans-serif ;
+    src: url("~/fonts/Abel-regular.ttf");
+}
 
 .feather {
     width: 16px;
