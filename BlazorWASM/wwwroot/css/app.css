@@ -4,8 +4,10 @@
     }
 }
 
+
 body {
     font-size: .875rem;
+    background-color: white;
 }
 *{
     font-family:  'Abel-regular', sans-serif ;
