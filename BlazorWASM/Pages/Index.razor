@@ -10,37 +10,137 @@
 
 <!-- Carsual Section -->
 <section class="py-2">
-    <div class="container-fluid bg-light-subtle">
-        <div class="row-cols-2 row align-items-end justify-content-center">
-            <div class="col-lg-8 text-dark">
-                <div class="row g-2">
-                    <div class="col-lg-6 p-3 shadow-lg">
-                        <h3>hi image <i class="text-warning">developer</i> :)</h3>
-                        <div class="alert alert-dark d-flex align-items-center overflow-hidden shadow-lg" role="alert">
-                            <i class="bi bi-linkedin fs-5 p-2"></i>
-                            <a href="https://www.linkedin.com/in/ramin-azali-2b506116a"
-                                class="alert-link text-decoration-none">Linkedin</a>
+    <div class="container-fluid  bg-light-subtle">
+        <div class="d-flex align-items-stretch  text-dark shadow-lg">
+            <div class="row  g-2 align-items-center  justify-content-center">
 
-                            <i class="bi bi-stack-overflow fs-5 p-2"></i>
-                            <a href="https://stackoverflow.com/users/7450350/ramin-azali"
-                                class="alert-link text-decoration-none">Stackoverflow</a>
-                        </div>
-                        <br>
-                        <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa
-                            nesciunt
-                            enim, earum praesentium laudantium aperiam quisquam expedita dolores dicta explicabo, ex rem
-                            voluptatum corrupti libero esse? Nemo, laborum dignissimos. </p>
-                    </div>
-                    <div class="col-lg-6 p-3 shadow-lg">
-                        <img src="photo_2024-09-07_18-21-06.jpg" alt="Azali"
-                            class="img-fluid rounded d-none d-sm-block">
+                <!-- Imaged Section -->
+                <div class="col-lg-8 p-3 d-flex align-items-stretch">
+                    <div class="d-flex flex-column w-100">
+                        <h3>Hi i am <i class="text-warning">Developer</i></h3>
+                        <p class="lead"> With this online tool, you can create text of a specific length and inner
+                            composition. In the "Text Length" option, you can enter the exact number of characters and
+                            the program will generate text of this length. The length value takes into account all
+                            characters in the text – including letters, numbers, spaces, and any other symbols. In the
+                            "Text Composition" option, you can specify the type of characters that should be included in
+                            the generated text. You can choose from several popular options, such as "Lowercase Letters
+                            (a-z)", "Uppercase Letters (A-Z)", "Mixed Letters (a-zA-Z)", "Numbers (0-9)", "Lowercase
+                            Letters and Numbers", "Uppercase Letters and Numbers", "All Letters and Numbers", and
+                            "Custom Symbols". If you select the last option, you can specify your own set of symbols and
+                            characters for the text. You can list them in a multi-line field below. For example, you can
+                            create text that's composed of 1000 emojis "😊" and "☹️". Textabulous!</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 ">
 
+                <!-- Image Section -->
+                <div class="col-lg-4 d-flex ml-2 p-4 justify-content-sm-center">
+                    <img src="photo_2024-09-07_18-21-06.jpg" alt="My Image"
+                        class="img-fluid rounded-circle d-none d-md-block d-sm-block carousel-image">
+                </div>
             </div>
+
 
         </div>
     </div>
 </section>
+
+
+
+
+
+<!-- Learn more -->
+
+<section class="py-1">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="photo_2024-09-07_18-21-06.jpg" class="card-img-top img-fluid rounded" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="photo_2024-09-07_18-21-06.jpg" class="card-img-top img-fluid rounded" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="photo_2024-09-07_18-21-06.jpg" class="card-img-top img-fluid rounded" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer Section -->
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Content -->
+
+            <div class="col-3"></div>
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-xl-6 col-12">
+                <h4 class="text-warning h2">Contact Me</h4>
+                <p>Feel free to reach out tool me</p>
+
+                <form>
+                    <!-- Full Name -->
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
+                            required>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-warning" @onclick="SendEmail">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-3"></div>
+
+        </div>
+    </div>
+</footer>
+
+
+@code {
+    private void SendEmail(MouseEventArgs e)
+    {
+        throw new NotImplementedException();
+    }
+}

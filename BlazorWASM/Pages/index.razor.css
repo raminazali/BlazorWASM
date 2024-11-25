@@ -1,6 +1,6 @@
 .carousel-image {
-    max-height: 400px;
-    /* Set max height for images */
-    object-fit: fill;
-    /* Ensure images fill the container proportionally */
-}
+    max-height: 300px; /* Ensure maximum height */
+    object-fit: fill; /* Image will fill proportionally */
+    width: auto; /* Ensure image spans full width */
+    height: auto; /* Allow auto height to scale properly */
+}   
