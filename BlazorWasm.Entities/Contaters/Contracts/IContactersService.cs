@@ -5,5 +5,5 @@ namespace BlazorWasm.Entities.Contaters.Contracts;
 
 public interface IContactersService
 {
-    Task Create(CreateContacterDto dto);
+    Task<bool> Create(CreateContacterDto dto);
 }

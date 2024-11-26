@@ -2,21 +2,26 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using BlazorWASM;
 using BlazorWasm.Data.Configurations;
+using Blazored.Toast;
 
+#region project Code
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
-
-
-#region Places that we dealing with it
-
-string domain = "https://localhost:7513/api/v1";
-
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(domain) });
-builder.Services.AddDataLayer();
-
 #endregion
 
+string domain = "http://localhost:5121/api/";
 
+
+
+
+
+
+builder.Services.AddBlazoredToast();
+builder.Services.AddDataLayer(domain);
+
+
+#region App Section
 await builder.Build().RunAsync();
+
+#endregion

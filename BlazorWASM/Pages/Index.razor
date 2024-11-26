@@ -1,9 +1,15 @@
 ﻿@using BlazorWASM.Components
 @using BlazorWASM.Layout.B2C
 @using BlazorWASM.Components.Panel
+@using BlazorWasm.Data.Services
+@using BlazorWasm.Entities.Contaters.Contracts
+@using BlazorWasm.Entities.Contaters.Dtos
+@using Blazored.Toast.Configuration
 @layout SiteLayout
 @page "/"
-
+@inject IContactersService _contactersService
+@inject IToastService ToastService;
+@inject IToastService toastService
 <!-- Header -->
 
 <CustomerHeader />
@@ -71,6 +77,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
+                            using BlazorWasm.Entities.Contaters.Dtos;
                             card's content.</p>
                     </div>
                 </div>
@@ -89,8 +96,6 @@
         </div>
     </div>
 </section>
-
-
 <!-- footer Section -->
 
 <footer class="bg-dark text-white py-4 mt-5">
@@ -98,36 +103,46 @@
         <div class="row">
             <!-- Footer Content -->
 
-            <div class="col-3"></div>
+            <div class="col-3">
+            </div>
             <!-- Contact Form -->
             <div class="col-lg-6 col-xl-6 col-12">
                 <h4 class="text-warning h2">Contact Me</h4>
                 <p>Feel free to reach out tool me</p>
 
-                <form>
+                <form Model="@model" @onsubmit="SendEmail">
                     <!-- Full Name -->
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
-                            required>
+                        <input type="text" @bind-value="@model.FullName" class="form-control" id="fullName"
+                            placeholder="Enter your full name" required>
                     </div>
 
                     <!-- Subject -->
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                        <input type="text" @bind-value="@model.Subject" class="form-control" id="subject"
+                            placeholder="Enter subject" required>
                     </div>
 
                     <!-- Email -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <input type="email" @bind-value="@model.Email" class="form-control" id="email"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">description</label>
+                        <input type="text" @bind-value="@model.Description" class="form-control" id="description"
+                            placeholder="Enter your description" />
                     </div>
 
                     <!-- Submit Button -->
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-warning" @onclick="SendEmail">Send Message</button>
+                        <button type="submit" class="btn btn-warning">Send Message</button>
                     </div>
+
                 </form>
             </div>
 
@@ -136,11 +151,24 @@
         </div>
     </div>
 </footer>
+<BlazoredToasts />
 
 
 @code {
-    private void SendEmail(MouseEventArgs e)
+
+    public CreateContacterDto model { get; set; } = new();
+    private async Task SendEmail(EventArgs e)
     {
-        throw new NotImplementedException();
+        var result = await _contactersService.Create(model);
+        result = false;
+        if (!result)
+        {
+            toastService.ShowToast(ToastLevel.Error, "Contact creation Error!", opt =>
+            {
+                opt.Position = ToastPosition.BottomLeft;
+                opt.ShowCloseButton = true;
+                opt.PauseProgressOnHover = true;
+            });
+        }
     }
 }
