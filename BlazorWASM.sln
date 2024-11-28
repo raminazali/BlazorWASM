@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASM", "BlazorWASM\BlazorWASM.csproj", "{3FA37EAF-CC94-4848-9EBD-AC912CA5804D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm.Entities", "BlazorWasm.Entities\BlazorWasm.Entities.csproj", "{A73FAA1A-29A2-4C25-AABE-3018F36554F3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm.Data", "BlazorWasm.Data\BlazorWasm.Data.csproj", "{3125D566-9645-4219-99F6-7766568C2E60}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{3FA37EAF-CC94-4848-9EBD-AC912CA5804D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FA37EAF-CC94-4848-9EBD-AC912CA5804D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FA37EAF-CC94-4848-9EBD-AC912CA5804D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A73FAA1A-29A2-4C25-AABE-3018F36554F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A73FAA1A-29A2-4C25-AABE-3018F36554F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A73FAA1A-29A2-4C25-AABE-3018F36554F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A73FAA1A-29A2-4C25-AABE-3018F36554F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3125D566-9645-4219-99F6-7766568C2E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3125D566-9645-4219-99F6-7766568C2E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3125D566-9645-4219-99F6-7766568C2E60}.Release|Any CPU.ActiveCfg = Release|Any CPU

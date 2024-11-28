@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BlazorWasm.Entities.Contaters;
+namespace BlazorWasm.Data.Entities.Contaters;
 
 public class Contacters
 {

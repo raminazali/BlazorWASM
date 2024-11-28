@@ -1,7 +1,6 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BlazorWasm.Entities.Contaters.Dtos;
+namespace BlazorWasm.Data.Entities.Contaters.Dtos;
 
 public class CreateContacterDto
 {

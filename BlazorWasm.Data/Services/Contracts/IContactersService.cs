@@ -1,5 +1,4 @@
-using System;
-using BlazorWasm.Entities.Contaters.Dtos;
+using BlazorWasm.Data.Entities.Contaters.Dtos;
 
 namespace BlazorWasm.Entities.Contaters.Contracts;
 
