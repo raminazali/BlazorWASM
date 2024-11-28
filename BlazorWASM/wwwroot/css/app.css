@@ -10,8 +10,8 @@ body {
     background-color: white;
 }
 *{
-    font-family:  'Abel-regular', sans-serif ;
-    src: url("~/fonts/Abel-regular.ttf");
+    font-family: IRANSans !important;
+    src: url("~/fonts/iranian Sans.ttf");
 }
 
 .feather {

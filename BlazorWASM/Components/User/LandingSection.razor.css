@@ -1,0 +1,19 @@
+.carousel-image {
+    max-height: 300px;
+}
+
+/* Custom CSS for Background Section */
+.background-section {
+    background-image: url('/1650388204668.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    /* Make the image cover the entire section */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    width: 100%;
+    /* Ensure the section takes the full width */
+    height: 100vh;
+    /* Full viewport height */
+}
