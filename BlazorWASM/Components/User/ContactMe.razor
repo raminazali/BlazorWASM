@@ -4,9 +4,12 @@
 @inject IContactersService _contactersService
 @inject IToastService toastService
 
-<form Model="@model" @onsubmit="SendEmail">
+<EditForm Model="model" OnValidSubmit="SendMail" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
     <!-- Full Name -->
     <div class="mb-3">
+        <ValidationMessage class="text-danger" For="@(() => model.FullName)" />
         <label for="fullName" class="form-label">Full Name</label>
         <input type="text" @bind-value="@model.FullName" class="form-control" id="fullName"
             placeholder="Enter your full name" required>
@@ -14,6 +17,7 @@
 
     <!-- Subject -->
     <div class="mb-3">
+        <ValidationMessage class="text-danger" For="@(() => model.Subject)" />
         <label for="subject" class="form-label">Subject</label>
         <input type="text" @bind-value="@model.Subject" class="form-control" id="subject" placeholder="Enter subject"
             required>
@@ -21,32 +25,45 @@
 
     <!-- Email -->
     <div class="mb-3">
+        <ValidationMessage class="text-danger" For="@(() => model.Email)" />
         <label for="email" class="form-label">Email</label>
         <input type="email" @bind-value="@model.Email" class="form-control" id="email" placeholder="Enter your email"
             required>
     </div>
 
     <div class="mb-3">
+        <ValidationMessage class="text-danger" For="@(() => model.Description)" />
+
         <label for="description" class="form-label">description</label>
-        <input type="text" @bind-value="@model.Description" class="form-control" id="description"
-            placeholder="Enter your description" />
+        <textarea @bind="@model.Description" class="form-control" id="description"
+            placeholder="Enter your description"></textarea>
     </div>
 
     <!-- Submit Button -->
     <div class="d-grid">
-        <button type="submit" class="btn btn-warning">Send Message</button>
+        <button class="btn btn-success">Send Message</button>
     </div>
     <BlazoredToasts />
 
-</form>
+</EditForm>
 @code {
 
     public CreateContacterDto model { get; set; } = new();
-    private async Task SendEmail(EventArgs e)
+    private async Task SendMail(EditContext e)
     {
-        var result = await _contactersService.Create(model);
-
-        if (!result)
+        var result = true;
+        if (result)
+        {
+            toastService.ShowToast(ToastLevel.Success, "Create of contact is successfull", opt =>
+            {
+                opt.Position = ToastPosition.BottomRight;
+                opt.ShowCloseButton = true;
+                opt.PauseProgressOnHover = true;
+            });
+            await Task.Delay(1000);
+            model = new();
+        }
+        else
         {
             toastService.ShowToast(ToastLevel.Error, "Contact creation Error!", opt =>
             {
@@ -55,5 +72,15 @@
                 opt.PauseProgressOnHover = true;
             });
         }
+    }
+
+    private void HandleInvalidSubmit()
+    {
+        toastService.ShowToast(ToastLevel.Warning, "Please correct the errors in the form.", opt =>
+        {
+            opt.Position = ToastPosition.BottomLeft;
+            opt.ShowCloseButton = true;
+            opt.PauseProgressOnHover = true;
+        });
     }
 }

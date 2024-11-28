@@ -25,7 +25,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\BlazorWasm.Data\BlazorWasm.Data.csproj" />
-      <ProjectReference Include="..\BlazorWasm.Entities\BlazorWasm.Entities.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,28 @@
+﻿@page "/contact-me"
+@using BlazorWASM.Components.User
+@using BlazorWASM.Layout.B2C
+@layout SiteLayout
+
+
+<div class="d-flex flex-column min-vh-100 bg-dark">
+    <!-- Header Section -->
+    <CustomerHeader />
+
+    <!-- Main Content Section -->
+    <div class="flex-grow-1">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 col-md-12 col-xl-3">
+                <!-- Left column content (if any) -->
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-12 col-xl-6">
+                <ContactMe />
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-12 col-xl-3">
+                <!-- Right column content (if any) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <Footer />
+</div>

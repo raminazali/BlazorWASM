@@ -5,11 +5,14 @@ namespace BlazorWasm.Data.Entities.Contaters.Dtos;
 public class CreateContacterDto
 {
     [Required]
-    public string Email { get; set; }
+    [EmailAddress]
+    public string? Email { get; set; }
     [Required]
-    public string Subject { get; set; }
+    [StringLength(40, ErrorMessage = "Subject is too long!")]
+    public string? Subject { get; set; }
     [Required]
-    public string FullName { get; set; }
-    public string Description { get; set; }
+    [StringLength(40, ErrorMessage = "FullName is too long!")]
+    public string? FullName { get; set; }
+    public string? Description { get; set; }
 
 }
