@@ -20,11 +20,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Layout\B2C\_Imports.razor" />
+      <ProjectReference Include="..\BlazorWasm.Data\BlazorWasm.Data.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BlazorWasm.Data\BlazorWasm.Data.csproj" />
+      <Folder Include="wwwroot\img\" />
+      <Folder Include="wwwroot\js\" />
     </ItemGroup>
 
 </Project>

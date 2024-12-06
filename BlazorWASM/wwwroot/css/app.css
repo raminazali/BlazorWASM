@@ -1,5 +1,5 @@
-@media(min-width: 768px){
-    .new-lettters{
+@media(min-width: 768px) {
+    .new-lettters {
         width: 50%;
     }
 }
@@ -9,9 +9,10 @@ body {
     font-size: .875rem;
     background-color: white;
 }
-*{
-    font-family: IRANSans !important;
-    src: url("~/fonts/iranian Sans.ttf");
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow' !important;
+    src: url("~/fonts/materialdesignicons-webfont.woff2");
 }
 
 .feather {
@@ -58,19 +59,19 @@ body {
     color: #333;
 }
 
-.sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #727272;
-}
+    .sidebar .nav-link .feather {
+        margin-right: 4px;
+        color: #727272;
+    }
 
-.sidebar .nav-link.active {
-    color: #2470dc;
-}
+    .sidebar .nav-link.active {
+        color: #2470dc;
+    }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
-}
+        .sidebar .nav-link:hover .feather,
+        .sidebar .nav-link.active .feather {
+            color: inherit;
+        }
 
 .sidebar-heading {
     font-size: .75rem;
@@ -93,6 +94,7 @@ body {
     top: .25rem;
     right: 1rem;
 }
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -106,6 +108,7 @@ body {
         font-size: 3.5rem;
     }
 }
+
 .navbar .form-control {
     padding: .75rem 1rem;
     border-width: 0;
@@ -118,10 +121,11 @@ body {
     border-color: rgba(255, 255, 255, .1);
 }
 
-.form-control-dark:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-}
+    .form-control-dark:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -134,9 +138,9 @@ body {
     z-index: 1000;
 }
 
-#blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
-}
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
