@@ -11,8 +11,8 @@ body {
 }
 
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow' !important;
-    src: url("~/fonts/materialdesignicons-webfont.woff2");
+    font-family: 'Estedad', sans-serif !important;
+    src: url("fonts/Estedad-Black.ttf");
 }
 
 .feather {

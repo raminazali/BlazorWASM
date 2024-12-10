@@ -1,22 +1,21 @@
-﻿@using BlazorWASM.Layout.B2C
-@layout SiteLayout
-@page "/"
+﻿@layout SiteLayout
+@page "/about"
+@using BlazorWASM.Layout.B2C
 
 <!-- Set Page Title and HeadContent-->
 
-<PageTitle>Index</PageTitle>
+<PageTitle>About</PageTitle>
 <HeadContent>
     <meta name="keywords" content="@keys" />
     <meta name="description" content="@Description" />
     <meta name="author" content="RaminAzali" />
 </HeadContent>
 
-<BlazorWASM.Components.User.CustomerHeader />
+<BlazorWASM.Components.User.CustomerHeader/>
 
-<BlazorWASM.Components.User.CustomerMain />
+<BlazorWASM.Components.User.AboutMain/>
 
-<BlazorWASM.Components.User.CustomerFooter />
-
+<BlazorWASM.Components.User.CustomerFooter/>
 
 
 @code {
